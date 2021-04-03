@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/react-youtube-api/build/static/js/main.0f0e340f.chunk.js",
+    "main.js.map": "/react-youtube-api/build/static/js/main.0f0e340f.chunk.js.map",
+    "runtime-main.js": "/react-youtube-api/build/static/js/runtime-main.05b8e27f.js",
+    "runtime-main.js.map": "/react-youtube-api/build/static/js/runtime-main.05b8e27f.js.map",
+    "static/js/2.38314def.chunk.js": "/react-youtube-api/build/static/js/2.38314def.chunk.js",
+    "static/js/2.38314def.chunk.js.map": "/react-youtube-api/build/static/js/2.38314def.chunk.js.map",
+    "index.html": "/react-youtube-api/build/index.html",
+    "static/js/2.38314def.chunk.js.LICENSE.txt": "/react-youtube-api/build/static/js/2.38314def.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05b8e27f.js",
+    "static/js/2.38314def.chunk.js",
+    "static/js/main.0f0e340f.chunk.js"
+  ]
+}
