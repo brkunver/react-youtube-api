@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import SearchBar from './Components/SearchBar'
+import Container from '@material-ui/core/Container';
+import { useState } from 'react';
+import axios from 'axios';
+import KEY from './API/YoutubeAPI'
+
 
 function App() {
+  let [searchTerm, setSearchTerm] = useState('');
+
+  let [res, setRes] = useState([]);
+
+  let onButtonClick = (term) => {
+    setSearchTerm(term);
+    axios.get("https://www.googleapis.com/youtube/v3/search", {
+      params: {
+        part: "snippet",
+        maxResult: 5,
+        q: searchTerm,
+        type: "video",
+        key: KEY
+      }
+    }).then(response => {
+      setRes(response.data.items)
+    });
+  }
+
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <SearchBar onButtonClick={onButtonClick} />
+    </Container>
+
+
   );
 }
 
